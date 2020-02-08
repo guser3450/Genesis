@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Rocket Elevators</title>
+		<meta name="description" content="Welcome to Rocket Elevators"/>
+		<meta name="Author" content="Gabriel Frigault [www.stepofweb.com]" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+		
+<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-red				= red grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
+
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+						<!-- Logo -->
+						<a class="logo float-left scrollTo" href="#top">
+							<img src="assets/home_page/R2.png" alt="Rocket elevator logo" />
+						</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="#">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+										<a href="#services">
+											SERVICES
+										</a>
+									</li>
+									<li><!-- WORK -->
+										<a href="#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+			</div>
+
+
+			<section class="page-header page-header-xs dark">
+				<div class="container">
+
+					<h1>SUBMISSION</h1>
+
+				</div>
+			</section>
+			<!-- /PAGE HEADER -->
+
+
+
+
+			<!--Estimer-->
+
+				<!-- 
+				Available heights
+					h-100
+					h-150
+					h-200
+					h-250
+					h-300
+					h-350
+					h-400
+					h-450
+					h-500
+					h-550
+					h-600
+                -->
+                <div class="col-md-4">
+                    <label for="Building_Type">Building Type</label>
+                    <select id="type" onchange="selection();" class="form-control pointer"; name="Type[building]";>
+                        <option value="Select">--- Select ---</option>
+                        <option value="HybridS">Hybrid</option>
+                        <option value="CorporateS">Corporate</option>
+                        <option value="CommercialS">Commercial</option>
+                        <option value="ResidentialS">Residential</option>
+                    </select>
+                </div>		
+
+				<!--radio button-->
+            <fieldset>
+					<div class="container">
+                    <legend>Building Type:</legend>
+                    <label for="standard">Standard</label>
+                    <input type="radio" name="size" id="standard" value="7565">
+                    <label for="premium">Premium</label>
+                    <input type="radio" name="size" id="premium" value="12345">
+                    <label for="excelium">Excelium</label>
+					<input type="radio" name="size" id="excelium" value="15400">
+					</div>
+			</fieldset>
+				<!--/radio button-->
+
+            <!--Commercial Q-->
+            <section id="commercialQ" style="display: none";>
+            <div class="container">
+                <div class="col-md-4">
+                    <label for="commercial1">The number of distinct businesses *</label>
+                    <input required type="number" type="button" class="form-control" id="commercialQ1">
+                </div>
+                <div class="col-md-4">
+                    <label for="commercial2">The number of floors contained in the building *</label>
+                    <input required type="number" type="button" onchange="commercial();" class="form-control" id="commercialQ2">
+                </div>
+                <div class="col-md-4">
+                    <label for="commercial3">The number of basements contained in the building *</label>
+                    <input required type="number" value="" class="form-control" name="contact[name][required]" id="commercialQ3">
+                </div>
+                <div class="col-md-4">
+                    <label for="commercial4">The number of parking space available *</label>
+                    <input required type="number" value="" class="form-control" name="contact[name][required]" id="commercialQ4">
+                </div>
+                <div class="col-md-4">
+                    <label for="commercial5">The number of elevator cages to be deployed *</label>
+                    <input onchange="commercial();" required type="number" type="button" class="form-control" id="commercialQ5">
+                </div>
+            </div>
+                
+			</section>
+            <!--/Commercial Q-->
+            
+            <!--Residential Q-->
+            <section id="residentialQ" style="display: none";>
+            <div class="residential">
+                <div class="col-md-4">
+                    <label for="contact:name">The number of appartments in the building *</label>
+                    <input required type="number" value="" class="form-control" name="contact[name][required]" id="residentialQ1">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of floors contained in the building *</label>
+                    <input required type="number" value="" class="form-control" name="contact[name][required]" id="residentialQ2">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of basements contained in the building *</label>
+                    <input required type="number" type="button" onchange="residential();" class="form-control" name="contact[name][required]" id="residentialQ3">
+                </div>
+            </div> 
+            </section>
+            <!--/Residential Q-->
+
+             <!--Corporate Q-->
+            <section id="corporateQ" style="display: none";>
+            <div class="corporate">
+                <div class="col-md-4">
+                    <label for="contact:name">The number of separate companies *</label>
+                    <input required type="number" type="button" class="form-control" id="corporateQ1">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of floors contained in the building *</label>
+                    <input required type="number" type="button" onchange="corporate();" class="form-control" id="corporateQ2">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of basements contained in the building *</label>
+                    <input required type="number" type="button" onchange="corporate();" class="form-control" id="corporateQ3">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of parking spaces available *</label>
+                    <input required type="number" type="button" class="form-control" id="corporateQ4">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The maximum number of occupants per floor *</label>
+                    <input required type="number" type="button" onchange="corporate();" class="form-control" id="corporateQ5">
+                </div>
+            </div> 
+            </section>
+            <!--/Corporate Q-->
+
+            <!--Hybrid Q-->
+            <section id="hybridQ" style="display: none";> 
+            <div class="hybrid">
+                <div class="col-md-4">
+                    <label for="contact:name">The number of distinct businesses *</label>
+                    <input required type="number" type="button" class="form-control" id="hybridQ1">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of floors contained in the building *</label>
+                    <input required type="number" type="button" onchange="hybrid();" class="form-control" id="hybridQ2">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of basements contained in the building *</label>
+                    <input required type="number" type="button" onchange="hybrid();" class="form-control" id="hybridQ3">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of parking spaces available *</label>
+                    <input required type="number" type="button" class="form-control" id="hybridQ4">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The maximum number of occupants per floor *</label>
+                    <input required type="number" type="button" onchange="hybrid();" class="form-control" id="hybridQ5">
+                </div>
+                <div class="col-md-4">
+                    <label for="contact:name">The number of hours of activity of the building (the maximum being  24) *</label>
+                    <input required type="number" type="button"  class="form-control" id="hybridQ6">
+                </div>
+            </div> 
+            </section>
+			<!--/Hybrid Q-->
+			
+			<!--prix-->
+			<div class="container">
+			<section class="container"­ style="display: prix">
+				<label><strong>Elevator cost:</strong></label>
+				<input style="display: block" id="cage" disabled>
+
+				<label><strong>Installation cost:</strong></label>
+				<input style="display: block" id="install" disabled>
+
+				<label><strong>Total price:</strong></label>
+				<input style="display: block" required type="number" id="bigtotal"­ disabled>
+			</section>
+			</div>
+			<!--/prix-->
+
+
+
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+						<!-- col #1 -->
+					<div class="col-md-8">
+
+							<h3 class="letter-spacing-1">WHY US?</h3>
+
+							<!-- Small Description -->
+							<p>
+								Rocket elevators deliver satisfaction to our clients since 1976. Our services are professionnal and we provide the right tools for each of are customers.
+							</p>
+							<h2>1(800) 666-1234</h2>
+						</div>
+						<!-- /col #1 -->
+
+						<!-- col #2 -->
+						<div class="col-md-4">
+							<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+							<!-- Newsletter Form -->
+							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success"type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
+
+
+						</div>
+						<!-- /col #2 -->
+					</div>
+				</div>
+
+			</footer>
+			<!-- /FOOTER -->
+			
+		</div>
+		<!-- /wrapper -->
+		
+		
+		<!-- PRELOADER -->
+		<div id="preloader">
+			<div class="inner">
+				<span class="loader"></span>
+			</div>
+		</div><!-- /PRELOADER -->
+		
+		
+		<!-- JAVASCRIPT FILES -->
+		<script>var plugin_path = 'assets/plugins/';</script>
+		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+		
+        <script src="assets/js/scripts.js"></script>
+		
+        <script src="assets/js/contact.js"></script>
+        <script src="assets/js/soumission.js"></script>
+		
+	</script>
+</body>
+</html>
